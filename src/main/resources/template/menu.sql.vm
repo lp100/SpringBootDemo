@@ -1,0 +1,11 @@
+-- 菜单SQL
+INSERT INTO `sys_permission` (`PermissionID`, `ParentID`,`PermissionCode`, `PermissionName`, `url`, `Description`, `Memo`, `PermissionSN`)
+VALUES ('${keyid_1}', '1', '${className}Manager','${comments}', 'sys/${pathName}.html', NULL, NULL , 6);
+INSERT INTO `sys_permission` (`PermissionID`, `ParentID`, `PermissionCode`,`PermissionName`, `url`, `Description`, `PermissionType`, `Memo`, `PermissionSN`)
+ VALUES ('${keyid_2}', '${keyid_1}', '${className}Select','查看', NULL, '${pathName}:list,${pathName}:info', '2', NULL, 0);
+INSERT INTO `sys_permission` (`PermissionID`, `ParentID`, `PermissionCode`,`PermissionName`, `url`, `Description`, `PermissionType`, `Memo`, `PermissionSN`)
+ VALUES ('${keyid_3}', '${keyid_1}', '${className}Add','新增', NULL, '${pathName}:save', '2', NULL, 0);
+INSERT INTO `sys_permission` (`PermissionID`, `ParentID`,`PermissionCode`, `PermissionName`, `url`, `Description`, `PermissionType`, `Memo`, `PermissionSN`)
+ VALUES ('${keyid_4}', '${keyid_1}', '${className}Update','修改', NULL, '${pathName}:update', '2', NULL, 0);
+INSERT INTO `sys_permission` (`PermissionID`, `ParentID`, `PermissionCode`,`PermissionName`, `url`, `Description`, `PermissionType`, `Memo`, `PermissionSN`)
+ VALUES ('${keyid_5}', '${keyid_1}', '${className}Delete','删除', NULL, '${pathName}:delete', '2', NULL, 0);

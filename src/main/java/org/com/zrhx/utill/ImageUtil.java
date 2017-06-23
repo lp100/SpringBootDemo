@@ -1,21 +1,14 @@
 package org.com.zrhx.utill;
 
-import java.awt.AlphaComposite;
+import org.apache.log4j.Logger;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.RenderingHints;
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
-
-import javax.imageio.ImageIO;
-
-import org.apache.log4j.Logger;
 
 public class ImageUtil {
 	

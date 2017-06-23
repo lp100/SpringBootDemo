@@ -1,0 +1,18 @@
+#if($level)
+    #set($levelpackage=${level}+".")
+#else
+    #set($levelpackage="")
+#end
+package ${package}.${levelpackage}mapper;
+
+import ${package}.${levelpackage}model.${className};
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${className}Mapper extends BaseDao<${className}> {
+	
+}

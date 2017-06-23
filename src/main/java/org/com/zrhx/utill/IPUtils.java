@@ -61,7 +61,7 @@ public class IPUtils {
      * @param request
      * @return
      */
-    public static  String  getLocalHost(javax.servlet.http.HttpServletRequest request){
+    public static  String  getLocalHost(HttpServletRequest request){
         String reurl = request.getRequestURL().toString();
         if (reurl.indexOf("localhost") != -1
                 || reurl.indexOf("127.0.0.1") != -1) {
@@ -85,7 +85,7 @@ public class IPUtils {
      * @param request
      * @return
      */
-    public static String  getFilePath(javax.servlet.http.HttpServletRequest request){
+    public static String  getFilePath(HttpServletRequest request){
         String host = getLocalHost(request);
         int localPort = request.getLocalPort();
 

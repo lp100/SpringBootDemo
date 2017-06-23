@@ -45,12 +45,16 @@ public class SysLoginController extends BaseController<SysLoginController>{
 //			token.setRememberMe(rememberMe);//设置记住我  自动登录
 			subject.login(token);
 		}catch (UnknownAccountException e) {
+			logger.error(e.getMessage(),e);
 			return R.error(e.getMessage());
 		}catch (IncorrectCredentialsException e) {
+			logger.error(e.getMessage(),e);
 			return R.error(e.getMessage());
 		}catch (LockedAccountException e) {
+			logger.error(e.getMessage(),e);
 			return R.error(e.getMessage());
 		}catch (AuthenticationException e) {
+			logger.error(e.getMessage(),e);
 			return R.error("账户验证失败");
 		}
 		return R.ok();
@@ -62,7 +66,7 @@ public class SysLoginController extends BaseController<SysLoginController>{
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
 		ShiroUtils.logout();
-		return "redirect:login.html";
+		return "redirect:login.jsp";
 	}
 
 	/**
@@ -70,6 +74,6 @@ public class SysLoginController extends BaseController<SysLoginController>{
 	 */
 	@RequestMapping(value = "index")
 	public String index() {
-		return "login.html";
+		return "login.jsp";
 	}
 }
