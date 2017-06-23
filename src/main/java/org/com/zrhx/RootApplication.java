@@ -23,6 +23,7 @@ import java.io.File;
 @EnableTransactionManagement // 开启注解事务管理，等同于xml配置文件中的 <tx:annotation-driven />
 @EnableAutoConfiguration
 @MapperScan("org.com.zrhx.mapper")
+@SpringBootApplication
 public class RootApplication {
     public static final String MAX_FILE_SIZE = "1MB";
     public static final String MAX_REQUEST_SIZE = "1MB";
