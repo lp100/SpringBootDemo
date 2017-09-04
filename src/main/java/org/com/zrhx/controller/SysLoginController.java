@@ -74,6 +74,8 @@ public class SysLoginController extends BaseController<SysLoginController>{
 	 */
 	@RequestMapping(value = "index")
 	public String index() {
-		return "login.jsp";
+		System.out.println("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
+		//java -jar 方式不支持jsp，thymeleaf默认已经加加了.html 前缀加了classpath:/templates/  故只需要加 login即可要不然就找不到页面
+		return "login";
 	}
 }
