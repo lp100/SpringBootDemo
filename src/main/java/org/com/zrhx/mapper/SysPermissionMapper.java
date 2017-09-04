@@ -1,9 +1,11 @@
 package org.com.zrhx.mapper;
 
+import org.com.zrhx.annotation.MyBatisDao;
 import org.com.zrhx.model.SysPermission;
 
 import java.util.List;
 
+@MyBatisDao
 public interface SysPermissionMapper extends  BaseDao<SysPermission> {
     /**
      * 根据父菜单，查询子菜单

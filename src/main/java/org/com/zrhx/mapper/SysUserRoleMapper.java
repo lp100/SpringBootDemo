@@ -1,8 +1,9 @@
 package org.com.zrhx.mapper;
 
+import org.com.zrhx.annotation.MyBatisDao;
 import org.com.zrhx.model.SysUserRole;
 
-
+@MyBatisDao
 public interface SysUserRoleMapper {
     int deleteByPrimaryKey(String userroleID);
 

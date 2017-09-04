@@ -7,13 +7,13 @@
   <title>权限系统</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/bootstrap.min.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/font-awesome.min.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/all-skins.min.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/main.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/all-skins.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -58,12 +58,12 @@
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
-<script src="${pageContext.request.contextPath}/statics/libs/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/statics/libs/vue.min.js"></script>
-<script src="${pageContext.request.contextPath}/statics/libs/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/statics/libs/jquery.slimscroll.min.js"></script>
-<script src="${pageContext.request.contextPath}/statics/libs/fastclick.min.js"></script>
-<script src="${pageContext.request.contextPath}/statics/libs/app.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/vue.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/fastclick.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/libs/app.js"></script>
 <script type="text/javascript">
 var vm = new Vue({
 	el:'#rrapp',
@@ -96,7 +96,7 @@ var vm = new Vue({
 					}else{
 						vm.error = true;
 						vm.errorMsg = result.msg;
-						
+
 						vm.refreshCode();
 					}
 				},

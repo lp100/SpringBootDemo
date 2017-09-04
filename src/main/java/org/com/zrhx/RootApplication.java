@@ -1,5 +1,6 @@
 package org.com.zrhx;
 
+import org.com.zrhx.annotation.MyBatisDao;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -21,14 +22,10 @@ import java.io.File;
 @ComponentScan("org.com.zrhx")
 @EnableTransactionManagement // 开启注解事务管理，等同于xml配置文件中的 <tx:annotation-driven />
 @EnableAutoConfiguration
-@MapperScan("org.com.zrhx.mapper")
+@MapperScan(value = "org.com.zrhx.mapper",annotationClass = MyBatisDao.class)
 @SpringBootApplication
 public class RootApplication {
-    public static final String MAX_FILE_SIZE = "1MB";
-    public static final String MAX_REQUEST_SIZE = "1MB";
-    public static final String FILE_SIZE_THRESHOLD = "1MB";
 
-    private static final String FILE_UPLOAD_PATH = "/goodmanage/attachment";
     
     public static void main(String[] args) {
         SpringApplication.run(RootApplication.class, args);
